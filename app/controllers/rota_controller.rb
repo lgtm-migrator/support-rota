@@ -11,10 +11,12 @@ class RotaController < ApplicationController
   private
 
   def rota
-    if params[:type] == "support"
-      Patterdale::Support::Rota.all
-    else
-      Patterdale::OutOfHours::Rota.all
+    Rails.cache.fetch request.path, expires_in: 12.hours do
+      if params[:type] == "support"
+        Patterdale::Support::Rota.all
+      else
+        Patterdale::OutOfHours::Rota.all
+      end
     end
   end
 end
