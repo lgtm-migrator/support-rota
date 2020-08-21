@@ -11,4 +11,4 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
       - name: Run tests
-        run: script/test
+        run: script/cibuild
