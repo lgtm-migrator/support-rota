@@ -1,41 +1,49 @@
-# Using this template
+# Support Rota
 
-1. Search for `TODO` across the repository to customise the template to the new
-  project
-1. Be aware of [dxw RFCs](https://github.com/dxw/tech-team-rfcs), especially
-  those that have not resulted in a default code change in this repository:
-  - [rfc-013-use-docker-to-deploy-and-run-applications-in-containers](https://github.com/dxw/tech-team-rfcs/blob/master/rfc-013-use-docker-to-deploy-and-run-applications-in-containers.md)
-
-TODO: Remove this section from the README once complete
-
----
-
-# Rails Template
-
-TODO: replace README header with project name
-
-TODO: Add a summary of who the application is for and what it will do.
+A Rails app that returns the dxw Support and Out of Hours rotas from Opsgenie in iCal and JSON formats.
 
 ## Getting started
 
 1. copy `/.env.example` into `/.env.development.local`.
 
-  Our intention is that the example should include enough to get the application started quickly. If this is not the case, please ask another developer for a copy of their `/.env.development.local` file.
+Our intention is that the example should include enough to get the application started quickly. If this is not the case, please ask another developer for a copy of their `/.env.development.local` file.
 
-TODO: Add getting started steps
+dxw specific values are stored in the Shared 1password vault.
+
+2. Run the server:
+
+```bash
+script/server
+```
+
+The data is available at the following routes:
+
+### Support rota
+
+- http://localhost:9292/support/rota.ics
+- http://localhost:9292/support/rota.json
+
+### Out of hours
+
+- http://localhost:9292/out-of-hours/rota.ics
+- http://localhost:9292/out-of-hours/rota.json
 
 ## Running the tests
 
-TODO: Add testing instructions
+```bash
+script/test
+```
 
 ## Running Brakeman
 
 Run [Brakeman](https://brakemanscanner.org/) to highlight any security vulnerabilities:
+
 ```bash
 brakeman
 ```
 
 To pipe the results to a file:
+
 ```bash
 brakeman -o report.text
 ```
@@ -70,7 +78,7 @@ To manage sensitive environment variables:
 
 ## Access
 
-TODO: Where can people find the service and the different environments?
+The app is hosted on Heroku at https://dxw-support-rota.herokuapp.com.
 
 ## Source
 
