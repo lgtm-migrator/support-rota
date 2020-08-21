@@ -9,10 +9,12 @@ gem "bootstrap", ">= 4.3.1"
 gem "coffee-rails", "~> 5.0"
 gem "haml-rails"
 gem "high_voltage"
+gem "icalendar"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "pg"
 gem "mini_racer"
+gem "opsgenie-schedule"
 gem "puma", "~> 4.1"
 gem "rollbar"
 gem "rails", "~> 6.0.0"
@@ -30,7 +32,10 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
+  gem "factory_bot"
   gem "selenium-webdriver"
+  gem "timecop"
+  gem "webmock"
 end
 
 group :development do
@@ -53,6 +58,6 @@ group :development, :test do
 end
 
 group :test do
-  gem "database_cleaner"
   gem "launchy"
+  gem "webmock"
 end
