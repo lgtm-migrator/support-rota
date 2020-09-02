@@ -20,13 +20,13 @@ The data is available at the following routes:
 
 ### Support rota
 
-- http://localhost:9292/support/rota.ics
-- http://localhost:9292/support/rota.json
+- http://localhost:3000/support/rota.ics
+- http://localhost:3000/support/rota.json
 
 ### Out of hours
 
-- http://localhost:9292/out-of-hours/rota.ics
-- http://localhost:9292/out-of-hours/rota.json
+- http://localhost:3000/out-of-hours/rota.ics
+- http://localhost:3000/out-of-hours/rota.json
 
 ## Running the tests
 
