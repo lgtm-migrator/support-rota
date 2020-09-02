@@ -18,15 +18,31 @@ script/server
 
 The data is available at the following routes:
 
-### Support rota
+### Support rota (dev and ops eng)
 
 - http://localhost:3000/support/rota.ics
 - http://localhost:3000/support/rota.json
 
-### Out of hours
+### Out of hours (1st and 2nd lines)
 
 - http://localhost:3000/out-of-hours/rota.ics
 - http://localhost:3000/out-of-hours/rota.json
+
+### Developer
+
+- http://localhost:3000/v2/dev/rota.json
+
+### Ops engineer
+
+- http://localhost:3000/v2/ops/rota.json
+
+### OOH First line
+
+- http://localhost:3000/v2/ooh1/rota.json
+
+### OOH Second line
+
+- http://localhost:3000/v2/ooh2/rota.json
 
 ## Running the tests
 
