@@ -1,0 +1,2 @@
+require_relative "opsgenie_tamer/rota"
+require_relative "opsgenie_tamer/support_rotations_fetcher"
