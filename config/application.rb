@@ -16,6 +16,7 @@ require "rails/test_unit/railtie"
 Bundler.require(*Rails.groups)
 
 require "./lib/patterdale"
+require "./lib/opsgenie_tamer"
 
 # TODO: Name the application
 module RailsTemplate
