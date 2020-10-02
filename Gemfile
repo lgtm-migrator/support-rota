@@ -34,6 +34,7 @@ end
 group :test do
   gem "capybara", ">= 2.15"
   gem "factory_bot"
+  gem "launchy"
   gem "selenium-webdriver"
   gem "timecop"
   gem "webmock"
@@ -56,9 +57,4 @@ group :development, :test do
   gem "pry"
   gem "rspec-rails"
   gem "standard"
-end
-
-group :test do
-  gem "launchy"
-  gem "webmock"
 end
