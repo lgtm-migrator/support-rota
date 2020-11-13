@@ -1,5 +1,15 @@
 module Patterdale
   module OutOfHours
+    class UnknownUser
+      def username
+        "unknown.user@dxw.com"
+      end
+
+      def full_name
+        "Unknown User"
+      end
+    end
+
     class Rotations
       FIRST_LINE_SCHEDULE_ID = "e71d500f-896a-4b28-8b08-3bfe56e1ed76"
       SECOND_LINE_SCHEDULE_ID = "b8e97704-0e9d-41b5-b27c-9d9027c83943"
@@ -9,6 +19,8 @@ module Patterdale
         "538465d7-67d0-4d3d-80e0-e2a07a2b5649",
         "6fce1fd0-578a-431a-8c18-ae7db8b48bb5"
       ].freeze
+
+      UNKNOWN_USER = UnknownUser.new.freeze
 
       def upcoming
         chunked_schedule.map do |support_batch|
@@ -75,7 +87,12 @@ module Patterdale
       end
 
       def find_user_for_date(periods, date)
-        periods.find { |p| (p.start_date.to_date..p.end_date.to_date).cover?(date) }.user
+        period =
+          periods.find { |p|
+            (p.start_date.to_date..p.end_date.to_date).cover?(date)
+          }
+
+        period&.user || UNKNOWN_USER
       end
     end
   end
