@@ -16,7 +16,7 @@ module Patterdale
 
       ROTATION_IDS = [
         "60c5f533-50f9-451a-8c59-61b032838468",
-        "538465d7-67d0-4d3d-80e0-e2a07a2b5649",
+        "5305436a-0a10-40c6-a677-5fb77bf90b4a", # OOH Rota 2021-01-06 to 2021-06-16
         "6fce1fd0-578a-431a-8c18-ae7db8b48bb5"
       ].freeze
 
