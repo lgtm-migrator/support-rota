@@ -6,15 +6,14 @@ A Rails app that returns the dxw Support and Out of Hours rotas from Opsgenie in
 
 1. copy `/.env.example` into `/.env.development.local`.
 
-Our intention is that the example should include enough to get the application started quickly. If this is not the case, please ask another developer for a copy of their `/.env.development.local` file.
+    Our intention is that the example should include enough to get the application started quickly. If this is not the case, please ask another developer for a copy of their `/.env.development.local` file.
 
-dxw specific values are stored in the Shared 1password vault.
+    dxw specific values are stored in the Shared 1password vault.
+1. Run the server:
 
-2. Run the server:
-
-```bash
-script/server
-```
+  ```bash
+  script/server
+  ```
 
 The data is available at the following routes:
 
