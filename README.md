@@ -4,6 +4,7 @@ A Rails app that returns the dxw Support and Out of Hours rotas from Opsgenie in
 
 ## Getting started
 
+1. [Install Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
 1. copy `/.env.example` into `/.env.development.local`.
 
     Our intention is that the example should include enough to get the application started quickly. If this is not the case, please ask another developer for a copy of their `/.env.development.local` file.
