@@ -18,3 +18,5 @@ services:
       - redis
     env_file:
        - .env
+    volumes:
+      - .:/srv/app
