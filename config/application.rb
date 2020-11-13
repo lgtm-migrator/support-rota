@@ -18,8 +18,7 @@ Bundler.require(*Rails.groups)
 require "./lib/patterdale"
 require "./lib/opsgenie_tamer"
 
-# TODO: Name the application
-module RailsTemplate
+module SupportRota
   class Application < Rails::Application
     config.generators do |g|
       g.test_framework :rspec,
