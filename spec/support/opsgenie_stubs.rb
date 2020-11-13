@@ -1,7 +1,8 @@
 module OpsgenieStubs
   def stub_schedule_for_id(id)
     url = "https://api.opsgenie.com/v2/schedules/#{id}?identifierType=id"
-    body = JSON.parse(File.read(File.join("spec", "fixtures", "schedule.json"))).to_json
+    fixture_name = "schedule_#{id.split("-").first}.json"
+    body = JSON.parse(File.read(File.join("spec", "fixtures", fixture_name))).to_json
     stub_request(:get, url)
       .to_return(
         status: 200,
