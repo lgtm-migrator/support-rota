@@ -17,8 +17,52 @@ RSpec.describe Patterdale::OutOfHours::Rotations do
   end
 
   describe "upcoming" do
+    let(:first_line_names) do
+      support_rotations
+        .upcoming
+        .map { |rota| rota.first_line.full_name }
+        .uniq
+    end
+
+    let(:second_line_names) do
+      support_rotations
+        .upcoming
+        .map { |rota| rota.second_line.full_name }
+        .uniq
+    end
+
+    it "inserts UnknownUser null object into gaps in the rotas" do
+      aggregate_failures do
+        expect(first_line_names).to eq(
+          [
+            "Unknown User",
+            "Chuck",
+            "Alice",
+            "Craig",
+            "Dan",
+            "Carol",
+            "Dave",
+            "Carlos",
+            "Erin",
+            "Eve",
+            "Charlie",
+            "bob example"
+          ]
+        )
+        expect(second_line_names).to eq(
+          [
+            "Alice",
+            "Carol",
+            "bob example",
+            "Charlie",
+            "Unknown User"
+          ]
+        )
+      end
+    end
+
     it "returns a list of rota items" do
-      expect(support_rotations.upcoming.count).to eq(16)
+      expect(support_rotations.upcoming.count).to eq(31)
     end
   end
 end
