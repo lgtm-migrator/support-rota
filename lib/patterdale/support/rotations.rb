@@ -2,11 +2,10 @@ module Patterdale
   module Support
     class Rotations
       OPSGENIE_SCHEDULE_ID = "e71d500f-896a-4b28-8b08-3bfe56e1ed76"
-      OPSGENIE_IN_HOURS_ROTATION_IDS = [
-        "b073c102-ecd5-4a6f-acf2-443280074c33",
-        "3d9295c6-748d-4bd4-a153-8fd559be0722",
-        "06af48dc-0496-43ea-bae7-77b96e77ff76"
-      ].freeze
+
+      def initialize(in_hours_rotation_ids: ENV.fetch("OPSGENIE_IN_HOURS_ROTATION_IDS"))
+        @in_hours_rotation_ids = in_hours_rotation_ids.split(",")
+      end
 
       def self.create_rota_item(support_batch)
         return unless support_batch.first && support_batch.last
@@ -58,7 +57,7 @@ module Patterdale
       end
 
       def devops_timelines
-        timelines.select { |t| OPSGENIE_IN_HOURS_ROTATION_IDS.include?(t.id) }
+        timelines.select { |t| @in_hours_rotation_ids.include?(t.id) }
       end
 
       private
