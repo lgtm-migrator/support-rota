@@ -5,8 +5,8 @@ RSpec.describe Patterdale::Support::Rotations do
 
   before do
     Timecop.travel("2020-02-01")
-    stub_schedule_for_id(described_class::OPSGENIE_SCHEDULE_ID)
-    stub_support_rotations(id: described_class::OPSGENIE_SCHEDULE_ID)
+    stub_schedule_for_id(ENV.fetch("OPSGENIE_MAIN_SCHEDULE_ID"))
+    stub_support_rotations(id: ENV.fetch("OPSGENIE_MAIN_SCHEDULE_ID"))
     stub_opsgenie_users
   end
 

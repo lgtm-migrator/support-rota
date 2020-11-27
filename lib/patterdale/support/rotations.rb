@@ -3,7 +3,7 @@ module Patterdale
     class Rotations
       OPSGENIE_SCHEDULE_ID = "e71d500f-896a-4b28-8b08-3bfe56e1ed76"
 
-      def initialize(in_hours_rotation_ids: ENV.fetch("OPSGENIE_IN_HOURS_ROTATION_IDS"), opsgenie_schedule_id: ENV.fetch("OPSGENIE_SCHEDULE_ID"))
+      def initialize(in_hours_rotation_ids: ENV.fetch("OPSGENIE_IN_HOURS_ROTATION_IDS"), opsgenie_schedule_id: ENV.fetch("OPSGENIE_MAIN_SCHEDULE_ID"))
         @in_hours_rotation_ids = in_hours_rotation_ids.split(",")
         @opsgenie_schedule_id = opsgenie_schedule_id
       end

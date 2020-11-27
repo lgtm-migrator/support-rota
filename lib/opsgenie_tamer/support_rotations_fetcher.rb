@@ -3,7 +3,7 @@ module OpsgenieTamer
     HISTORICAL_INTERVAL_IN_MONTHS = 2
     TOTAL_INTERVAL_IN_MONTHS = 12
 
-    def initialize(first_line_schedule_id: ENV.fetch("FIRST_LINE_SCHEDULE_ID"), second_line_schedule_id: ENV.fetch("SECOND_LINE_SCHEDULE_ID"))
+    def initialize(first_line_schedule_id: ENV.fetch("OPSGENIE_MAIN_SCHEDULE_ID"), second_line_schedule_id: ENV.fetch("OPSGENIE_OUT_OF_HOURS_2ND_LINE_SCHEDULE_ID"))
       @first_line_schedule_id = first_line_schedule_id
       @second_line_schedule_id = second_line_schedule_id
     end
