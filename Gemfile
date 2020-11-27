@@ -33,6 +33,7 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
+  gem "cucumber-rails", require: false
   gem "factory_bot"
   gem "launchy"
   gem "selenium-webdriver"
