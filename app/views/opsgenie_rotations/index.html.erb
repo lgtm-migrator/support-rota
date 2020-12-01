@@ -14,7 +14,8 @@
       <% if schedule.rotations.any? %>
         <ul class="rotations">
           <% schedule.rotations.each do |rotation| %>
-            <li id="rotation_<%= rotation.id %>" class="rotation">
+            <% is_active = @active_rotations.include?(rotation) ? 'active' : '' %>
+            <li id="rotation_<%= rotation.id %>" class="rotation <%= is_active %>">
               <dl>
                 <dt>rotation name</dt>
                 <dd class="rotation-name"><%= rotation.name -%></dd>

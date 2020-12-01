@@ -23,6 +23,7 @@ dl {
 .schedule {
   padding: 2rem;
   background-color: rgb(245, 242, 240);
+  margin-top: 2rem;
   margin-bottom: 2rem;
   dl {
     margin-left: 2rem;
@@ -41,6 +42,9 @@ dl {
   margin-bottom: 1rem;
   dl {
     font-size: 1rem;
+  }
+  &.active {
+    background-color: #ECFDF5;
   }
 }
 

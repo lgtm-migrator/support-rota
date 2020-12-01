@@ -1,7 +1,21 @@
 module OpsgenieConfigSH
   def basic_auth(user, password)
     encoded_login = ["#{user}:#{password}"].pack("m*")
-    page.driver.header 'Authorization', "Basic #{encoded_login}"
+    page.driver.header "Authorization", "Basic #{encoded_login}"
+  end
+
+  def active_rotations
+    active_rotation_ids = %w[
+      b073c102-ecd5-4a6f-acf2-443280074c33
+      06af48dc-0496-43ea-bae7-77b96e77ff76
+      60c5f533-50f9-451a-8c59-61b032838468
+      5305436a-0a10-40c6-a677-5fb77bf90b4a
+      6fce1fd0-578a-431a-8c18-ae7db8b48bb5
+    ]
+    Schedule.all
+      .map { |schedule| schedule.rotations }
+      .flatten
+      .select { |rotation| active_rotation_ids.include?(rotation.id) }
   end
 end
 
@@ -35,8 +49,10 @@ Then("I see lists of rotations grouped by schedule") do
   end
 end
 
-Then('I see each active rotation visually highlighted') do
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I see each active rotation visually highlighted") do
+  active_rotations.each do |rotation|
+    expect(page).to have_css("#rotation_#{rotation.id}.active")
+  end
 end
 
 Given("I'm not authenticated") do
