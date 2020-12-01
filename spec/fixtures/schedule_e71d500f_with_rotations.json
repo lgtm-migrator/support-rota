@@ -1,0 +1,81 @@
+{
+  "data": {
+    "id": "e71d500f-896a-4b28-8b08-3bfe56e1ed76",
+    "name": "first_line",
+    "description": "",
+    "timezone": "Europe/London",
+    "enabled": true,
+    "ownerTeam": {
+      "id": "72c99d92-c7c8-4fd9-b8db-9cc293cd19e7",
+      "name": "support_team"
+    },
+    "rotations": [
+      {
+        "id": "b073c102-ecd5-4a6f-acf2-443280074c33",
+        "name": "Ops",
+        "startDate": "2019-11-27T10:00:00Z",
+        "type": "weekly",
+        "length": 1,
+        "participants": [],
+        "timeRestriction": {
+          "type": "weekday-and-time-of-day",
+          "restrictions": []
+        }
+      },
+      {
+        "id": "06af48dc-0496-43ea-bae7-77b96e77ff76",
+        "name": "Dev 2020-06-24 to 2020-12-23",
+        "startDate": "2020-06-24T09:00:00Z",
+        "endDate": "2020-12-23T10:00:00Z",
+        "type": "weekly",
+        "length": 1,
+        "participants": [],
+        "timeRestriction": {
+          "type": "weekday-and-time-of-day",
+          "restrictions": []
+        }
+      },
+      {
+        "id": "2b3ac010-907c-4d53-a016-45fdd8043072",
+        "name": "Dev 2021-01-06 to 2021-06-09",
+        "startDate": "2021-01-06T10:00:00Z",
+        "endDate": "2021-06-09T09:00:00Z",
+        "type": "weekly",
+        "length": 1,
+        "participants": [],
+        "timeRestriction": {
+          "type": "weekday-and-time-of-day",
+          "restrictions": []
+        }
+      },
+      {
+        "id": "60c5f533-50f9-451a-8c59-61b032838468",
+        "name": "OOH  2020-06-24 till 2020-12-23",
+        "startDate": "2020-06-24T09:00:00Z",
+        "endDate": "2020-12-23T10:00:00Z",
+        "type": "weekly",
+        "length": 1,
+        "participants": [],
+        "timeRestriction": {
+          "type": "weekday-and-time-of-day",
+          "restrictions": []
+        }
+      },
+      {
+        "id": "5305436a-0a10-40c6-a677-5fb77bf90b4a",
+        "name": "OOH Rota 2021-01-06 to 2021-06-16",
+        "startDate": "2021-01-06T10:00:00Z",
+        "endDate": "2021-06-16T09:00:00Z",
+        "type": "weekly",
+        "length": 1,
+        "participants": [],
+        "timeRestriction": {
+          "type": "weekday-and-time-of-day",
+          "restrictions": []
+        }
+      }
+    ]
+  },
+  "took": 0.117,
+  "requestId": "ebd21714-d220-4080-ba3d-185a5c92b37d"
+}

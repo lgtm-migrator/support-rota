@@ -4,13 +4,28 @@
   <% @schedules.each do |schedule| %>
     <li id="schedule_<%= schedule.id %>" class="schedule">
       <dl>
-        <dt>id</dt>
-        <dd class="schedule-id"><%= schedule.id %></dd>
-
         <dt>name</dt>
         <dd class="schedule-name"><%= schedule.name %></dd>
 
+        <dt>id</dt>
+        <dd class="schedule-id"><%= schedule.id %></dd>
       </dl>
+
+      <% if schedule.rotations.any? %>
+        <ul class="rotations">
+          <% schedule.rotations.each do |rotation| %>
+            <li id="rotation_<%= rotation.id %>" class="rotation">
+              <dl>
+                <dt>name</dt>
+                <dd class="rotation-name"><%= rotation.name -%></dd>
+
+                <dt>id</dt>
+                <dd class="rotation-id"><%= rotation.id %></dd>
+              </dl>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
     </li>
   <% end %>
 </ul>

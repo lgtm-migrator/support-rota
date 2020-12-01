@@ -1,0 +1,29 @@
+{
+  "data": {
+    "id": "b8e97704-0e9d-41b5-b27c-9d9027c83943",
+    "name": "ooh_second_line",
+    "description": "",
+    "timezone": "Europe/London",
+    "enabled": true,
+    "ownerTeam": {
+      "id": "72c99d92-c7c8-4fd9-b8db-9cc293cd19e7",
+      "name": "support_team"
+    },
+    "rotations": [
+      {
+        "id": "6fce1fd0-578a-431a-8c18-ae7db8b48bb5",
+        "name": "Rota",
+        "startDate": "2019-11-27T10:30:00Z",
+        "type": "weekly",
+        "length": 1,
+        "participants": [],
+        "timeRestriction": {
+          "type": "weekday-and-time-of-day",
+          "restrictions": []
+        }
+      }
+    ]
+  },
+  "took": 0.036,
+  "requestId": "ae16eefc-cd2a-4605-a6c8-bcb649d2c973"
+}
