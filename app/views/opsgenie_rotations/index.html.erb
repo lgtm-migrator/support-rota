@@ -1,1 +1,16 @@
 <h2>Opsgenie Rotations</h2>
+
+<ul class="schedules">
+  <% @schedules.each do |schedule| %>
+    <li id="schedule_<%= schedule.id %>" class="schedule">
+      <dl>
+        <dt>id</dt>
+        <dd class="schedule-id"><%= schedule.id %></dd>
+
+        <dt>name</dt>
+        <dd class="schedule-name"><%= schedule.name %></dd>
+
+      </dl>
+    </li>
+  <% end %>
+</ul>

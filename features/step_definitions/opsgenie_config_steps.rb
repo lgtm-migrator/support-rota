@@ -19,7 +19,12 @@ When("I visit the opsgenie config page") do
 end
 
 Then('I see lists of rotations grouped by schedule') do
-  pending # Write code here that turns the phrase above into concrete actions
+  Schedule.all.each do |schedule|
+    within("#schedule_#{schedule.id}") do
+      expect(page).to have_css('.schedule-name', text: schedule.name)
+      expect(page).to have_css('.schedule-id', text: schedule.id)
+    end
+  end
 end
 
 Then('I see each active rotation visually highlighted') do

@@ -2,7 +2,7 @@ class OpsgenieRotationsController < ApplicationController
   before_action :basic_auth
 
   def index
-
+    @schedules = Schedule.all
   end
 
   private
