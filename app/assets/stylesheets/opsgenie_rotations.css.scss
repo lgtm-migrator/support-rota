@@ -1,0 +1,47 @@
+dl {
+  dt, dd {
+    float: left;
+  }
+  dt {
+    margin-right: 1rem;
+    clear: left;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  margin-bottom: 0;
+}
+
+
+.schedules, .rotations {
+  list-style-type: none;
+  padding: 0;
+}
+
+.schedule {
+  padding: 2rem;
+  background-color: rgb(245, 242, 240);
+  margin-bottom: 2rem;
+  dl {
+    margin-left: 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+.rotations {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.rotation {
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  dl {
+    font-size: 1rem;
+  }
+}
+
+
