@@ -15,4 +15,6 @@ Rails.application.routes.draw do
       get "rota", to: "rota#show"
     end
   end
+
+  get "opsgenie_rotations" => "opsgenie_rotations#index"
 end
