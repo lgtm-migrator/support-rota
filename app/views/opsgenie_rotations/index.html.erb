@@ -1,4 +1,9 @@
-<h2>Opsgenie rotations, grouped by schedule</h2>
+<% title = 'Opsgenie rotations, grouped by schedule' %>
+<% content_for :title do %>
+   <%= "Support rota: #{title}" %>
+<% end %>
+
+<h2><%= title %></h2>
 
 <ul class="schedules">
   <% @schedules.each do |schedule| %>
