@@ -1,9 +1,12 @@
 module OpsgenieTamer
   class SupportRotationsFetcher
-    FIRST_LINE_SCHEDULE_ID = "e71d500f-896a-4b28-8b08-3bfe56e1ed76"
-    SECOND_LINE_SCHEDULE_ID = "b8e97704-0e9d-41b5-b27c-9d9027c83943"
     HISTORICAL_INTERVAL_IN_MONTHS = 2
     TOTAL_INTERVAL_IN_MONTHS = 12
+
+    def initialize(first_line_schedule_id: ENV.fetch("OPSGENIE_MAIN_SCHEDULE_ID"), second_line_schedule_id: ENV.fetch("OPSGENIE_OUT_OF_HOURS_2ND_LINE_SCHEDULE_ID"))
+      @first_line_schedule_id = first_line_schedule_id
+      @second_line_schedule_id = second_line_schedule_id
+    end
 
     def call(rotation_type:)
       sorted_periods_for_type(rotation_type).map do |period|
@@ -47,11 +50,11 @@ module OpsgenieTamer
     end
 
     def first_line_schedule
-      @first_line_schedule ||= Opsgenie::Schedule.find_by_id(FIRST_LINE_SCHEDULE_ID)
+      @first_line_schedule ||= Opsgenie::Schedule.find_by_id(@first_line_schedule_id)
     end
 
     def second_line_schedule
-      @second_line_schedule ||= Opsgenie::Schedule.find_by_id(SECOND_LINE_SCHEDULE_ID)
+      @second_line_schedule ||= Opsgenie::Schedule.find_by_id(@second_line_schedule_id)
     end
   end
 end
