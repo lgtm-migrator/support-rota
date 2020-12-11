@@ -68,7 +68,7 @@ module Patterdale
       end
 
       def timelines
-        @timelines ||= schedule.timeline(interval: 3, interval_unit: :months)
+        @timelines ||= schedule.timeline(interval: 9, interval_unit: :months)
       end
 
       DisciplineSupportDay = Struct.new(:period, :timeline, keyword_init: true) {
