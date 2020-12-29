@@ -80,7 +80,7 @@ module Patterdale
       end
 
       def get_periods_for_schedule(schedule)
-        schedule.timeline(interval: 3, interval_unit: :months).select { |t| @ooh_rotation_ids.include?(t.id) }.map { |r| r.periods }.flatten
+        schedule.timeline(interval: 9, interval_unit: :months).select { |t| @ooh_rotation_ids.include?(t.id) }.map { |r| r.periods }.flatten
       end
 
       def find_user_for_date(periods, date)
