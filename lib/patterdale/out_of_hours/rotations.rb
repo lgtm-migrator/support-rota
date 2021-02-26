@@ -13,7 +13,7 @@ module Patterdale
     class Rotations
       UNKNOWN_USER = UnknownUser.new.freeze
 
-      def initialize(ooh_rotation_ids: ENV.fetch("OPSGENIE_OUT_OF_HOURS_ROTATION_IDS"), first_line_schedule_id: ENV.fetch("OPSGENIE_MAIN_SCHEDULE_ID"), second_line_schedule_id: ENV.fetch("OPSGENIE_OUT_OF_HOURS_2ND_LINE_SCHEDULE_ID"))
+      def initialize(ooh_rotation_ids: ENV.fetch("OPSGENIE_OUT_OF_HOURS_ROTATION_IDS"), first_line_schedule_id: ENV.fetch("OPSGENIE_FIRST_LINE_SCHEDULE_ID"), second_line_schedule_id: ENV.fetch("OPSGENIE_OUT_OF_HOURS_2ND_LINE_SCHEDULE_ID"))
         @ooh_rotation_ids = ooh_rotation_ids.split(",")
         @first_line_schedule_id = first_line_schedule_id
         @second_line_schedule_id = second_line_schedule_id
