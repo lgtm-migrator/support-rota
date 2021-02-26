@@ -1,9 +1,9 @@
 RSpec.describe OpsgenieTamer::SupportRotationsFetcher do
   before do
-    stub_schedule_for_id(ENV.fetch("OPSGENIE_OUT_OF_HOURS_2ND_LINE_SCHEDULE_ID"))
-    stub_support_rotations(id: ENV.fetch("OPSGENIE_OUT_OF_HOURS_2ND_LINE_SCHEDULE_ID"))
     stub_schedule_for_id(ENV.fetch("OPSGENIE_FIRST_LINE_SCHEDULE_ID"))
+    stub_schedule_for_id(ENV.fetch("OPSGENIE_SECOND_LINE_OOH_SCHEDULE_ID"))
     stub_support_rotations(id: ENV.fetch("OPSGENIE_FIRST_LINE_SCHEDULE_ID"))
+    stub_support_rotations(id: ENV.fetch("OPSGENIE_SECOND_LINE_OOH_SCHEDULE_ID"))
     stub_opsgenie_users
   end
 

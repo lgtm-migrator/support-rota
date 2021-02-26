@@ -6,10 +6,10 @@ RSpec.describe Patterdale::OutOfHours::Rotations do
   before do
     Timecop.travel("2020-02-01")
     stub_opsgenie_users
-    stub_schedule_for_id(ENV.fetch("OPSGENIE_OUT_OF_HOURS_2ND_LINE_SCHEDULE_ID"))
-    stub_support_rotations(date: Date.today, id: ENV.fetch("OPSGENIE_OUT_OF_HOURS_2ND_LINE_SCHEDULE_ID"), fixture_name: "second_line_ooh_rotations")
     stub_schedule_for_id(ENV.fetch("OPSGENIE_FIRST_LINE_SCHEDULE_ID"))
+    stub_schedule_for_id(ENV.fetch("OPSGENIE_SECOND_LINE_OOH_SCHEDULE_ID"))
     stub_support_rotations(date: Date.today, id: ENV.fetch("OPSGENIE_FIRST_LINE_SCHEDULE_ID"), fixture_name: "first_line_ooh_rotations")
+    stub_support_rotations(date: Date.today, id: ENV.fetch("OPSGENIE_SECOND_LINE_OOH_SCHEDULE_ID"), fixture_name: "second_line_ooh_rotations")
   end
 
   after do
