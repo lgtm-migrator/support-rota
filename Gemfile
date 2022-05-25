@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby "2.6.3"
+ruby "2.6.10"
 
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap", ">= 4.3.1"
@@ -17,7 +17,7 @@ gem "mini_racer"
 gem "opsgenie-schedule"
 gem "puma", "~> 4.3"
 gem "rollbar"
-gem "rails", "~> 6.0.0", ">= 6.0.3.7"
+gem "rails", "~> 6.0.0", ">= 6.0.4.8"
 gem "sass-rails", "~> 6.0"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
